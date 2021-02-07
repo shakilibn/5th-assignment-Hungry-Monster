@@ -1,10 +1,11 @@
-
-
 document.getElementById('search-button').addEventListener('click', function () {
     document.getElementById('foods-container').innerText = '';
     const searchInput = document.getElementById('search-input');
     let url =`https://www.themealdb.com/api/json/v1/1/search.php?f=${searchInput.value}`;
     
+    if (searchInput.value === ''){
+        alert("You didn't type any Items name. Please Select one");  //if search input is empty then show this alert
+    }
     if (searchInput.value.length === 1){
         url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${searchInput.value}` //if search by first key
     }
@@ -38,11 +39,12 @@ const displayFoods = url => {
                     const ingredientInfo = document.createElement('div');
                     ingredientInfo.className = "ingredient-info";
                     console.log(food);
+                    
                     ingredientInfo.innerHTML = `
                         <img src = ${food.strMealThumb}>
                         <h2>${food.strMeal}</h2>
                         <p><b>Ingredients</b></p>                        
-                        <!-- <p>${food.strIngredient1} : ${food.strMeasure1}</p>
+                        <p>${food.strIngredient1} : ${food.strMeasure1}</p>
                         <p>${food.strIngredient2} : ${food.strMeasure2}</p>
                         <p>${food.strIngredient3} : ${food.strMeasure3}</p>
                         <p>${food.strIngredient4} : ${food.strMeasure4}</p>
@@ -50,11 +52,11 @@ const displayFoods = url => {
                         <p>${food.strIngredient6} : ${food.strMeasure6}</p>
                         <p>${food.strIngredient7} : ${food.strMeasure7}</p>
                         <p>${food.strIngredient8} : ${food.strMeasure8}</p>
-                        <p>${food.strIngredient9} : ${food.strMeasure9}</p> -->
+                        <p>${food.strIngredient9} : ${food.strMeasure9}</p>
 
-                        <ul id="ingredients-ul"></ul>
+                        
                     `
-                    foodIngredients.appendChild(ingredientInfo);    //adding ingredients into foodIngredients div by append
+                    foodIngredients.appendChild(ingredientInfo);      //adding ingredients into foodIngredients div by append
                 });
             });
         })

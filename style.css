@@ -11,12 +11,8 @@
 }
 .food  {
     text-align:center;
-    border:2px solid magenta;
     width:200px;
     margin:50px;
-}
-#food-ingredients{
-    text-align:center;
 }
 .ingredient-info img {
     width:400px;
