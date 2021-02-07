@@ -38,8 +38,7 @@ const displayFoods = url => {
                     foodIngredients.innerText = '';
                     const ingredientInfo = document.createElement('div');
                     ingredientInfo.className = "ingredient-info";
-                    console.log(food);
-                    
+
                     ingredientInfo.innerHTML = `
                         <img src = ${food.strMealThumb}>
                         <h2>${food.strMeal}</h2>
@@ -52,9 +51,7 @@ const displayFoods = url => {
                         <p>${food.strIngredient6} : ${food.strMeasure6}</p>
                         <p>${food.strIngredient7} : ${food.strMeasure7}</p>
                         <p>${food.strIngredient8} : ${food.strMeasure8}</p>
-                        <p>${food.strIngredient9} : ${food.strMeasure9}</p>
-
-                        
+                        <p>${food.strIngredient9} : ${food.strMeasure9}</p>                        
                     `
                     foodIngredients.appendChild(ingredientInfo);      //adding ingredients into foodIngredients div by append
                 });
@@ -62,4 +59,5 @@ const displayFoods = url => {
         })
         .catch(error => alert('No items found'))
 }
+
 
