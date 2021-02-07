@@ -1,15 +1,21 @@
+#search-container{
+    text-align:center;
+    margin:50px 0;
+}
 #foods-container {
-    display:grid;
-    grid-template-columns: repeat(4,auto);
+    display: flex;
+    flex-wrap: wrap;
 }
 .food img, .ingredient-info img {
     width:200px;
 }
 .food  {
     text-align:center;
+    border:2px solid magenta;
+    width:200px;
+    margin:50px;
 }
 #food-ingredients{
-    /* margin:0 auto; */
     text-align:center;
 }
 .ingredient-info img {
