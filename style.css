@@ -1,0 +1,17 @@
+#foods-container {
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+}
+.food img, .ingredient-info img {
+    width:200px;
+}
+.food  {
+    text-align:center;
+}
+#food-ingredients{
+    /* margin:0 auto; */
+    text-align:center;
+}
+.ingredient-info img {
+    width:400px;
+}
